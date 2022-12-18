@@ -1,0 +1,40 @@
+{% extends 'app.html' %}
+{% block title %}
+	Todos los clientes
+{% endblock title %}
+
+{% block content %}
+<div class="container text-center mt-5">
+  <div class="row mb-5">
+    <div class="col-md-12">
+
+      <div class="table-responsive">
+
+        <nav aria-label="breadcrumb mb-3">
+          <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="../">Clientes</a></li>
+              <li class="breadcrumb-item"><a href="#">Detalles</a></li>
+              <li class="breadcrumb-item active" aria-current="page">{{cliente.nombre}}</a></li>
+          </ol>
+        </nav>
+
+        <div class="formulario" align="left">
+
+          <h4>Detalles</h4>
+
+          <p><span class="txt_negrita">ID:</span> <br> {{cliente.id}}</p>
+          <p><span class="txt_negrita">Codigo:</span> <br> {{cliente.codigo}}</p>
+          <p><span class="txt_negrita">Nombre:</span> <br> {{cliente.nombre}}</p>
+          <p><span class="txt_negrita">Año de nacimiento:</span> <br> {{cliente.anio_nacimiento}}</p>
+
+          <a href="{%url 'clientes' %}" type="submit" class="btn btn-primary">Volver</a>
+
+        </div>
+        
+      </div>
+
+    </div>
+
+  </div>      
+</div>
+{% endblock content %}
